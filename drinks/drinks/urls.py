@@ -21,5 +21,6 @@ from drinks import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.drink_list, name='drink_list'),  # Šakninio puslapio maršrutas
-    path('drinks/', views.drink_list)  # Jūsų /drinks/ maršrutas
+    path('drinks/', views.drink_list),  # Mano /drinks/ maršrutas
+    path('drinks/<int:id>', views.drink_detail)
 ]
