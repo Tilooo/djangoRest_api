@@ -21,9 +21,9 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.drink_list, name='drink_list'),  # Šakninio puslapio maršrutas
-    path('drinks/', views.drink_list),  # Mano /drinks/ maršrutas
-    path('drinks/<int:id>', views.drink_detail)
+    path('api/drinks/', views.drink_list),
+    path('drinks/<int:id>', views.drink_detail),
+    path('', views.index_view),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
